@@ -74,8 +74,8 @@ export default function MatchViewer() {
       {view === "home" && (
         <div>
           <h1 className="text-2xl mb-4">New England Premier Event - 2025</h1>
-          <button className="m-2" onClick={() => setView("matches")}>Matches</button>
-          <button className="m-2" onClick={() => setView("teams")}>Teams</button>
+          <button className="button-margin" onClick={() => setView("matches")}>Matches</button>
+          <button className="button-margin" onClick={() => setView("teams")}>Teams</button>
         </div>
       )}
 
@@ -83,7 +83,7 @@ export default function MatchViewer() {
         <div>
           <h1 className="text-xl mb-4">Select a Match</h1>
           {matches.map((match) => (
-            <button key={match.match} className="m-2" onClick={() => selectMatch(match)}>
+            <button key={match.match} className="button-margin" onClick={() => selectMatch(match)}>
               Match {match.match}
             </button>
           ))}
@@ -95,7 +95,7 @@ export default function MatchViewer() {
         <div>
           <h1 className="text-xl mb-4">Select a Team</h1>
           {sortedTeamNumbers.map((team) => (
-            <button key={team} className="m-2" onClick={() => selectTeam(team)}>
+            <button key={team} className="button-margin" onClick={() => selectTeam(team)}>
               Team {team}
             </button>
           ))}
